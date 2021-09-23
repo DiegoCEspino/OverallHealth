@@ -6,7 +6,11 @@
 
 ## General Info
 This browser based web application to ...
+<<<<<<< HEAD
 * Hi my name is Sarah, I'm excited about this project because I'm not sure.
+=======
+* Hi my name is Diego. I am nervous about this project because it is a new experience for me.
+>>>>>>> 14801b2f9999ce40a7dd6c1d1caad4e104e25d78
 	
 ## Technologies
 Technologies used for this project:
