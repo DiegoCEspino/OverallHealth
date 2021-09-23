@@ -6,6 +6,7 @@
 
 ## General Info
 This browser based web application to ...
+* Hi my name is Diego. I am nervous about this project because it is a new experience for me.
 	
 ## Technologies
 Technologies used for this project:
