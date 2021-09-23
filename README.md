@@ -8,6 +8,7 @@
 This browser based web application to ...
 * Hi my name is Sarah, I'm excited about this project because I'm not sure.
 * Hi my name is Diego. I am nervous about this project because it is a new experience for me.
+* Hi my name is Daniel. I am excited about this project because I love building projects. 
 	
 ## Technologies
 Technologies used for this project:
