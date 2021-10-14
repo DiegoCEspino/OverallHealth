@@ -5,9 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/setTimer.css">
     <title>Set Timer</title>
 </head>
 <body>
-    <h1>Hello world</h1>
+    <nav class="navbar navbar-light bg-success">
+        <div class="container py-3" id="topNavBar">
+            <p>Activities</p>
+            <i class="material-icons" id="profile">person</i>
+            <i class="material-icons" id="friends">people</i>
+            <i class="material-icons" id="activities">assessment</i>
+            <i class="material-icons" id="home">face</i>
+        </div>
+    </nav>
+    <div id="content">
+        <i class="material-icons" id="back">reply</i>
+        <h1 id="title">Timer</h1>
+        <div id="timer">
+            <div  class="clockContainer" id="minuteClock">
+                <h2 id="minutes">00</h2>    
+            </div>
+            <h2 id="column">:</h2>
+            <div class="clockContainer" id="secondClock">
+                <h2 id="seconds">00</h2>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <button class="btn btn-success" type="button">Start</button>
+    </footer>
 </body>
 </html>
