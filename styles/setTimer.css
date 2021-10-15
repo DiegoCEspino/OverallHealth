@@ -13,11 +13,17 @@
     background-color: cadetblue;
     display: grid;
     grid-template-columns: 43% 14% 43%;
-    border-radius: 150%;
+    border-radius: 200%;
     margin: auto;
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     grid-row: 4;
+}
+
+input{
+    height: 100px;
+    width: 50px;
+    font-size: 100px;
 }
 
 .clockContainer{
@@ -68,5 +74,5 @@ footer{
 }
 
 .material-icons.md-48{
-    font-size: 48px;
+    font-size: 72px;
 }
