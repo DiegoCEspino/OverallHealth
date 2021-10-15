@@ -9,30 +9,30 @@
     <title>Set Timer</title>
 </head>
 <body>
-    <nav class="navbar navbar-light bg-success">
-        <div class="container py-3" id="topNavBar">
-            <p>Activities</p>
-            <i class="material-icons" id="profile">person</i>
-            <i class="material-icons" id="friends">people</i>
-            <i class="material-icons" id="activities">assessment</i>
-            <i class="material-icons" id="home">face</i>
-        </div>
-    </nav>
+    <h1 class="title">Exercise</h1>
     <div id="content">
-        <i class="material-icons" id="back">reply</i>
-        <h1 id="title">Timer</h1>
+        <i class="material-icons md-48" id="back">reply</i>
+        <i class="material-icons md-48" id="activityIcon">fitness_center</i>
+        <h2 id="subtitle" class="title">Timer</h2>
         <div id="timer">
             <div  class="clockContainer" id="minuteClock">
-                <h2 id="minutes">00</h2>    
+                <input type="text" id="minutes" placeholder="00">   
             </div>
-            <h2 id="column">:</h2>
+            <h2 class="clockContainer" id="column">:</h2>
             <div class="clockContainer" id="secondClock">
-                <h2 id="seconds">00</h2>
+                <input type="text" id="seconds" placeholder="00">
             </div>
         </div>
     </div>
+    <br><br><br><br><br><br><br>
     <footer>
-        <button class="btn btn-success" type="button">Start</button>
+        <button class="btn btn-success btn-lg" type="button">Start</button>
+    </footer>
+    <footer class="navbar justify-content-evenly bg-info fixed-bottom">
+        <i class="material-icons md-48">home</i>
+        <i class="material-icons md-48">trending_up</i>
+        <i class="material-icons md-48">people</i>
+        <i class="material-icons md-48">person</i>
     </footer>
 </body>
 </html>

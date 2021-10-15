@@ -1,65 +1,72 @@
-#topNavBar{
-    display: grid;
-    grid-template-rows: 30% 70%;
-    grid-template-columns: 22% 23% 10% 23% 22%;
-}
-
-#profile, #friends, #activities, #home{
-    margin: auto;
-    grid-row: 2;
-}
-
-#activities{
-    grid-column: 4;
-}
-
-#home{
-    grid-column: 5;
-}
-
-nav div p{
-    margin: auto;
-    grid-column: 4;
-}
-
 #content{
     display: grid;
-    grid-template-rows: 20% 50% 30%;
+    grid-template-rows: 10% 10% 50% 20% 10%;
     text-align: center;
 }
 
 #back{
+    grid-row: 1;
     text-align: left;
-}
-
-#title{
-    text-align: center;
 }
 
 #timer{
     background-color: cadetblue;
     display: grid;
-    grid-template-columns: 5% 42% 5% 43% 5%;
+    grid-template-columns: 43% 14% 43%;
+    border-radius: 150%;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    grid-row: 4;
 }
 
 .clockContainer{
-    background-color: darkcyan;
+    margin: auto;
 }
 
 #minuteClock{
-    grid-column: 2;
+    margin: auto;
+    grid-column: 1;
 }
 
 #column{
-    grid-column: 3;
+    grid-column: 2;
 }
 
 #secondClock{
-    grid-column: 4;
+    margin: auto;
+    grid-column: 3;
+}
+
+#minutes, #seconds{
+    text-align: center;
+    width: 100%;
 }
 
 footer{
     grid-row: 3;
     margin: auto;
     text-align: center;
+}
+
+.title{
+    border-style: solid;
+    background-color: cadetblue;
+    text-align: center;
+    margin: auto;
+}
+
+#activityIcon{
+    background-color: cadetblue;
+    margin: auto;
+    border-radius: 100%;
+    grid-row: 2;
+}
+
+#subtitle{
+    grid-row: 3;
+}
+
+.material-icons.md-48{
+    font-size: 48px;
 }
