@@ -10,24 +10,26 @@
 </head>
 <body>
     <h1 class="title">Exercise</h1>
-    <div id="content">
-        <i class="material-icons md-48" id="back">reply</i>
-        <i class="material-icons md-48" id="activityIcon">fitness_center</i>
-        <h2 id="subtitle" class="title">Timer</h2>
-        <div id="timer">
-            <div  class="clockContainer" id="minuteClock">
-                <input type="text" id="minutes" placeholder="00">   
-            </div>
-            <h2 class="clockContainer" id="column">:</h2>
-            <div class="clockContainer" id="secondClock">
-                <input type="text" id="seconds" placeholder="00">
+    <form>
+        <div id="content">
+            <i class="material-icons md-48" id="back">reply</i>
+            <i class="material-icons md-48" id="activityIcon">fitness_center</i>
+            <h2 id="subtitle" class="title">Timer</h2>
+            <div id="timer">
+                <div  class="clockContainer" id="minuteClock">
+                    <input type="number" min="0" max="59" id="minutes" placeholder="00" autofocus>   
+                </div>
+                <h2 class="clockContainer" id="column">:</h2>
+                <div class="clockContainer" id="secondClock">
+                    <input type="number" min="0" max="59" id="seconds" placeholder="00">
+                </div>
             </div>
         </div>
-    </div>
-    <br><br><br><br><br><br><br><br><br>
-    <footer>
-        <button class="btn btn-success btn-lg" type="button">Start</button>
-    </footer>
+        <br><br><br><br><br><br><br><br><br>
+        <footer>
+            <button id="button" class="btn btn-success btn-lg" type="button" onclick="changeTimer()">Start</button>
+        </footer>
+    </form>
     <footer class="navbar justify-content-evenly bg-info fixed-bottom">
         <i class="material-icons md-48">
             <a href="Home.html">home</a>
@@ -42,5 +44,6 @@
             <a href="UserPage.html">person</a>
         </i>
     </footer>
+    <script src="../scripts/setTimer.js"></script>
 </body>
 </html>
