@@ -76,3 +76,8 @@ footer{
 .material-icons.md-48{
     font-size: 72px;
 }
+
+img{
+    height: 25%;
+    width: 25%;
+}
