@@ -1,68 +1,28 @@
 body{
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 15% 85%;
+    grid-template-columns: 25% 50% 25%;
 }
 
 header{
-    display: grid;
-    grid-template-columns: 10% 30% 50% 10%;
     grid-row: 1;
+    grid-column: 1/-1;
+    text-align: center;
+    margin: auto;
 }
 
 #content{
     grid-row: 2;
+    grid-column: 2;
     margin: auto;
-    background-color: wheat;
+    background-color: lightseagreen;
+    border-style: dashed;
 }
 
 #title{
     grid-row: 1;
     grid-column: 3;
     margin: auto;
-}
-
-#activityIcon{
-    background-color: cadetblue;
-    margin: auto;
-    border-radius: 100%;
-    grid-row: 1;
-    grid-column: 4;
-}
-
-#timer{
-    background-color: cadetblue;
-    display: grid;
-    grid-template-columns: 43% 14% 43%;
-    border-radius: 200%;
-    margin: auto;
-    height: 100px;
-    width: 200px;
-    grid-row: 1;
-    grid-column: 2;
-}
-
-.clockContainer{
-    margin: auto;
-}
-
-#minuteClock{
-    margin: auto;
-    grid-column: 1;
-}
-
-#column{
-    grid-column: 2;
-}
-
-#secondClock{
-    margin: auto;
-    grid-column: 3;
-}
-
-#minutes, #seconds{
-    text-align: center;
-    font-size: x-large;
-    background-color: white;
 }
 
 footer{
@@ -73,6 +33,13 @@ footer{
 
 .material-icons.md-48{
     font-size: 72px;
+    display: inline;
+}
+
+a .material-icons.md-48{
+    font-size: 50px;
+    background-color: lightskyblue;
+    border-radius: 100%;
 }
 
 img{
@@ -80,11 +47,16 @@ img{
     width: 25%;
 }
 
-#timerLink{
-    text-decoration: none;
-    color:darkgray;
+h3{
+    text-align: center;
 }
 
-#timerLinkIcon{
-    text-align: center;
+.activityBox a{
+    text-decoration: none;
+    color: black;
+}
+
+.activityBox{
+    border-style: solid;
+    background-color: lightskyblue;
 }
