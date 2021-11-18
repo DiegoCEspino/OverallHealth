@@ -1,21 +1,24 @@
 .body {
     background-color: #99A1B7;
-}
-#content {
     margin: 0px;
+    min-height: 750px;
     background: linear-gradient(to bottom, 
     #6E768C, #99A1B7);
 }
 #logo-name {
-    color: #283046;
+    color: #D2D7E4;
+    border: #283046;
+    border-style: solid;
+    border-width: 5px;
+    background-color: #636B81;
     padding: 20px;
+    font-size: 50px;
 }
 #inspire-quote {
-    padding: 0px 30px;
-    font-size: 25px;
+    padding: 20px 30px;
+    font-size: 45px;
     color: #283046;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
 }
 .nav-icon{
     height: 50px;
@@ -33,3 +36,30 @@
     justify-content: center;
     grid-gap: 15%;
 }
+#start-now {
+    padding: 20px 30px;
+    font-size: 25px;
+    color: #D2D7E4;
+    background-color: #636B81;
+    border: #283046;
+    border-style: solid;
+    border-width: 5px;
+    background-color: #636B81;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media only screen and (max-width: 700px) {
+    #logo-name {
+        text-align: center;
+    }
+    #inspire-quote {
+        text-align: center;
+    }
+    #start-now {
+        display: block;
+        margin: 0px auto;
+        max-width: 200px;
+        text-align: center;
+    }
+  }

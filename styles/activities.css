@@ -25,10 +25,21 @@ header{
     margin: auto;
 }
 
-footer{
-    grid-row: 3;
-    margin: auto;
-    text-align: center;
+.footer {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: #283046;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    justify-content: center;
+    grid-gap: 15%;
+}
+.nav-icon{
+    height: 50px;
+    width: auto;
 }
 
 .material-icons.md-48{
