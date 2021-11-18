@@ -11,13 +11,24 @@
     border-style: solid;
     border-width: 5px;
     background-color: #636B81;
-    padding: 20px;
+    padding: 29px 20px;
     font-size: 50px;
+    max-width: 200px;
+    display: block;
+    margin: 0px auto;
+    max-width: 200px;
+    text-align: center;
+    margin-top: 50px;
 }
 #inspire-quote {
     padding: 20px 30px;
     font-size: 45px;
     color: #283046;
+    display: block;
+    margin: 0px auto;
+    max-width: 700px;
+    text-align: center;
+    padding: 55px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .nav-icon{
@@ -37,8 +48,8 @@
     grid-gap: 15%;
 }
 #start-now {
-    padding: 20px 30px;
-    font-size: 25px;
+    padding: 20px 10px;
+    font-size: 30px;
     color: #D2D7E4;
     background-color: #636B81;
     border: #283046;
@@ -46,20 +57,12 @@
     border-width: 5px;
     background-color: #636B81;
     text-decoration: none;
+    display: block;
+    margin: 0px auto;
+    max-width: 200px;
+    text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 @media only screen and (max-width: 700px) {
-    #logo-name {
-        text-align: center;
-    }
-    #inspire-quote {
-        text-align: center;
-    }
-    #start-now {
-        display: block;
-        margin: 0px auto;
-        max-width: 200px;
-        text-align: center;
-    }
   }

@@ -32,7 +32,7 @@
 </head>
 
 <body class="body">
-    
+
         <h1 id="logo-name">Overall Health</h1>
         <div id="inspire-quote"></div>
         <a href="./activities.html" id="start-now">Start now!</a>
@@ -49,15 +49,31 @@
             <a href="Profile.html"><img src="../images/Profile.PNG" alt="Profile" class="nav-icon"></a>
         </div>
     </footer>
-
-
+    
+    
     <script>
         function display_Quote() {
-            db.collection("Quotes").doc("Inspire")
-            .onSnapshot(quote => { 
-                console.log("current document data: " + quote.data());  
-                document.getElementById("inspire-quote").innerHTML = quote.data().Quote1; 
-            })
+            var randomNum = Math.floor(Math.random() * 3);
+            console.log(randomNum)
+            if (randomNum == 0) {
+                db.collection("Quotes").doc("Inspire")
+                .onSnapshot(quote => { 
+                    console.log("current document data: " + quote.data());  
+                    document.getElementById("inspire-quote").innerHTML = quote.data().Quote0; 
+                })
+            } else if (randomNum == 1) {
+                db.collection("Quotes").doc("Inspire")
+                .onSnapshot(quote => { 
+                    console.log("current document data: " + quote.data());  
+                    document.getElementById("inspire-quote").innerHTML = quote.data().Quote1; 
+                })
+            } else {
+                db.collection("Quotes").doc("Inspire")
+                .onSnapshot(quote => { 
+                    console.log("current document data: " + quote.data());  
+                    document.getElementById("inspire-quote").innerHTML = quote.data().Quote2; 
+                })
+            }
         }
         display_Quote();
     </script>
