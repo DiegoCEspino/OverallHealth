@@ -32,10 +32,10 @@
 </head>
 
 <body class="body">
-    <div id="content">
+    
         <h1 id="logo-name">Overall Health</h1>
-        <div id="inspire-quote"> </div>
-    </div>
+        <div id="inspire-quote"></div>
+        <a href="./activities.html" id="start-now">Start now!</a>
     
     <footer class="footer">
         <div>
@@ -49,12 +49,14 @@
             <a href="Profile.html"><img src="../images/Profile.PNG" alt="Profile" class="nav-icon"></a>
         </div>
     </footer>
+
+
     <script>
         function display_Quote() {
             db.collection("Quotes").doc("Inspire")
             .onSnapshot(quote => { 
                 console.log("current document data: " + quote.data());  
-                document.getElementById("inspire-quote").innerHTML = quote.data().Quote; 
+                document.getElementById("inspire-quote").innerHTML = quote.data().Quote1; 
             })
         }
         display_Quote();
