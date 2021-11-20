@@ -1,5 +1,6 @@
 function changeTimer(){
     formatTime(document.getElementById("minutes").value, document.getElementById("seconds").value);
+    localStorage.setItem("timerSet", "true");
 }
 
 function formatTime(minutes, seconds){

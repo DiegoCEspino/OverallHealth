@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-    <!DOCTYPE html>
-    <html>
 
 
     <meta charset="utf-8">
@@ -65,7 +63,7 @@
                     // or whether we leave that to developer to handle.
                     var user = authResult.user;
 
-                    // determine wherther the use is a new user or not
+                    // determine wherther the user is a new user or not
                     if (authResult.additionalUserInfo.isNewUser){
                         db.collection("users").doc(user.uid).set({
                                 name: user.displayName,

@@ -1,5 +1,4 @@
 function timer(minutes, seconds, minutesShown, secondsShown){
-    console.log("Hello");
     if(seconds < 10){
         secondsShown.innerHTML = "0" + seconds;
     }
@@ -32,5 +31,9 @@ const time = async () => {
     }  
     await new Promise(r => setTimeout(r, 1000));
     secondsShown.innerHTML = "00";
+    if (localStorage.getItem("timerSet") == "true"){
+        alert("Time's up!")
+        localStorage.setItem("timerSet", "false");
+    }
 }
 time();

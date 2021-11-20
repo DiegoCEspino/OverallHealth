@@ -37,6 +37,7 @@ header{
     justify-content: center;
     grid-gap: 15%;
 }
+
 .nav-icon{
     height: 50px;
     width: auto;
@@ -53,11 +54,6 @@ a .material-icons.md-48{
     border-radius: 100%;
 }
 
-img{
-    height: 25%;
-    width: 25%;
-}
-
 h3{
     text-align: center;
 }
@@ -70,4 +66,9 @@ h3{
 .activityBox{
     border-style: solid;
     background-color: lightskyblue;
+}
+
+.favouriteIcon img{
+    height: 10%;
+    width: 10%;
 }
