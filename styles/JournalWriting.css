@@ -1,0 +1,14 @@
+#Journal-Title {
+    text-align: center;
+}
+
+#book-image {
+    width: 100px;
+    display: block;
+    margin: 0px auto;
+}
+
+#background-Journal {
+    background-color: burlywood;
+
+}

@@ -1,0 +1,26 @@
+#Journal-Title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+#background-Journal { 
+    background-color: #99A1B7;
+}
+
+#book-image {
+    width: 250px;
+    display: block;
+    margin: 0px auto;
+}
+
+.journal-description {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.button {
+    text-align: center;
+}
