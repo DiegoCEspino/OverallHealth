@@ -1,5 +1,5 @@
 function Favourite(activityName){
-    let activity = activityName.parentElement.childNodes[3].childNodes[1].innerHTML;
+    let activity = activityName.parentElement.childNodes[1].childNodes[0].innerHTML;
     console.log(activity);
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
@@ -41,18 +41,18 @@ function checkFavourite(){
             let array = db.collection("users").doc(user.uid)
             array.get()
                 .then(userDoc => {
-                    console.log(userDoc.data().name)
+                    //console.log(userDoc.data().name)
                     var user_fav = userDoc.data().favouriteActivities;
                     if (typeof user_fav != "undefined"){
                         for (let i = 0; i < activities.length; i++){
-                            if (user_fav.indexOf(activities[i].parentElement.childNodes[3].childNodes[1].innerHTML) == -1){
-                                activities[i].childNodes[1].innerHTML = "stars";
+                            if (user_fav.indexOf(activities[i].parentElement.childNodes[1].childNodes[0].innerHTML) == -1){
+                                activities[i].childNodes[0].innerHTML = "stars";
                             } else {
-                                activities[i].childNodes[1].innerHTML = "star";
+                                activities[i].childNodes[0].innerHTML = "star";
                             }
                         }
                     }
-                    console.log(user_fav);
+                    //console.log(user_fav);
                 });
         } else {
             console.log("User not logged in");
@@ -60,9 +60,30 @@ function checkFavourite(){
     });
 }
 
-let favourite = document.getElementsByClassName("favouriteIcon");
-for (let i = 0; i < favourite.length; i++){
-    favourite[i].addEventListener("click", function(){Favourite(favourite[i]);});
+function insertActivity(){
+    var activities = document.getElementsByClassName("favouriteIcon");
+    db.collection('activities').get().then(snap => {
+        var size = snap.size - activities.length // will return the collection size
+        //console.log(size);
+        for (let i = 0; i < size; i++){
+            document.body.childNodes[3].childNodes[1].innerHTML += '<div class="activityBox"><button class="favouriteIcon"><i class="material-icons md-48"></i></button><a class="activityLink" href=""><h3 class="activityTitle"></h3><img class="activityImage" src="" alt="Activity"><p class="activityDescription"></p></a></div>';
+        }
+        activities = document.getElementsByClassName("favouriteIcon");
+        for (let i = 1; i <= activities.length; i++){
+            db.collection("activities").doc(i.toString()).onSnapshot(
+                activity => { 
+                document.getElementsByClassName("activityTitle")[i - 1].innerHTML = activity.data().name;
+                document.getElementsByClassName("activityDescription")[i - 1].innerHTML = activity.data().description;
+                document.getElementsByClassName("activityLink")[i - 1].href = activity.data().href;
+                document.getElementsByClassName("activityImage")[i - 1].src = "../images/" + activity.data().icon + ".PNG";
+            })
+        }
+        let favourite = document.getElementsByClassName("favouriteIcon");
+        for (let i = 0; i < favourite.length; i++){
+            favourite[i].addEventListener("click", function(){Favourite(favourite[i]);});
+        }
+        checkFavourite();
+    });
 }
 
-checkFavourite();
+insertActivity()
