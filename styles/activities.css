@@ -38,9 +38,17 @@ header{
     grid-gap: 15%;
 }
 
+a img{
+    height: 50px;
+    width: auto;
+    background-color: whitesmoke;
+    border-radius: 100%;
+}
+
 .nav-icon{
     height: 50px;
     width: auto;
+    background-color: transparent;
 }
 
 .material-icons.md-48{
@@ -48,14 +56,9 @@ header{
     display: inline;
 }
 
-a .material-icons.md-48{
-    font-size: 50px;
-    background-color: lightskyblue;
-    border-radius: 100%;
-}
-
 h3{
     text-align: center;
+    display: inline;
 }
 
 .activityBox a{
@@ -71,4 +74,13 @@ h3{
 .favouriteIcon img{
     height: 10%;
     width: 10%;
+}
+
+button{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
 }

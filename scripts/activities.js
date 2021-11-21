@@ -1,5 +1,6 @@
 function Favourite(activityName){
-    let activity = activityName.childNodes[3].innerHTML
+    let activity = activityName.parentElement.childNodes[3].childNodes[1].innerHTML;
+    console.log(activity);
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             let array = db.collection("users").doc(user.uid)
@@ -44,10 +45,10 @@ function checkFavourite(){
                     var user_fav = userDoc.data().favouriteActivities;
                     if (typeof user_fav != "undefined"){
                         for (let i = 0; i < activities.length; i++){
-                            if (user_fav.indexOf(activities[i].childNodes[3].innerHTML) == -1){
-                                activities[i].childNodes[1].src = "../images/home.PNG";
+                            if (user_fav.indexOf(activities[i].parentElement.childNodes[3].childNodes[1].innerHTML) == -1){
+                                activities[i].childNodes[1].innerHTML = "stars";
                             } else {
-                                activities[i].childNodes[1].src = "../images/back.PNG";
+                                activities[i].childNodes[1].innerHTML = "star";
                             }
                         }
                     }
