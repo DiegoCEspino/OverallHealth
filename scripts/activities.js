@@ -35,7 +35,7 @@ function Favourite(activityName){
 }
 
 function checkFavourite(){
-    var activities = document.getElementsByClassName("favouriteIcon");
+    var activities = (document.getElementsByClassName("favouriteIcon"));
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             let array = db.collection("users").doc(user.uid)
@@ -53,6 +53,9 @@ function checkFavourite(){
                         }
                     }
                     //console.log(user_fav);
+                    for (let i = 0; i < activities.length; i++){
+                        activities[i].addEventListener("click", function(){Favourite(activities[i]);});
+                    }
                 });
         } else {
             console.log("User not logged in");
@@ -60,30 +63,77 @@ function checkFavourite(){
     });
 }
 
-function insertActivity(){
-    var activities = document.getElementsByClassName("favouriteIcon");
+function insertActivity(type = null){
+    //console.log(document.body.childNodes[5].childNodes[1]);
     db.collection('activities').get().then(snap => {
-        var size = snap.size - activities.length // will return the collection size
+        var size = snap.size // will return the collection size
         //console.log(size);
-        for (let i = 0; i < size; i++){
-            document.body.childNodes[3].childNodes[1].innerHTML += '<div class="activityBox"><button class="favouriteIcon"><i class="material-icons md-48"></i></button><a class="activityLink" href=""><h3 class="activityTitle"></h3><img class="activityImage" src="" alt="Activity"><p class="activityDescription"></p></a></div>';
-        }
-        activities = document.getElementsByClassName("favouriteIcon");
-        for (let i = 1; i <= activities.length; i++){
+        for (let i = 1; i <= size; i++){
             db.collection("activities").doc(i.toString()).onSnapshot(
-                activity => { 
-                document.getElementsByClassName("activityTitle")[i - 1].innerHTML = activity.data().name;
-                document.getElementsByClassName("activityDescription")[i - 1].innerHTML = activity.data().description;
-                document.getElementsByClassName("activityLink")[i - 1].href = activity.data().href;
-                document.getElementsByClassName("activityImage")[i - 1].src = "../images/" + activity.data().icon + ".PNG";
+                activity => {
+                if ((type == null) || (activity.data().icon == "meditate" && type == "mental") || (activity.data().icon == "strength" && type == "physical")){
+                    document.body.childNodes[5].childNodes[1].innerHTML += '<div class="activityBox"><button class="favouriteIcon"><i class="material-icons md-48"></i></button><a class="activityLink" href="' 
+                    + activity.data().href + '"><h3 class="activityTitle">' + activity.data().name 
+                    + '</h3><img class="activityImage" src="../images/' + activity.data().icon + '.PNG" alt="Activity"><p class="activityDescription">' 
+                    + activity.data().description + '</p></a></div>';
+                    //document.getElementsByClassName("activityTitle")[i - 1].innerHTML = activity.data().name;
+                    //document.getElementsByClassName("activityDescription")[i - 1].innerHTML = activity.data().description;
+                    //document.getElementsByClassName("activityLink")[i - 1].href = activity.data().href;
+                    //document.getElementsByClassName("activityImage")[i - 1].src = "../images/" + activity.data().icon + ".PNG";                    
+                }
             })
-        }
-        let favourite = document.getElementsByClassName("favouriteIcon");
-        for (let i = 0; i < favourite.length; i++){
-            favourite[i].addEventListener("click", function(){Favourite(favourite[i]);});
         }
         checkFavourite();
     });
 }
 
-insertActivity()
+function insertFavouritesOnly(){
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            let array = db.collection("users").doc(user.uid)
+            array.get()
+                .then(userDoc => {
+                    var user_fav = userDoc.data().favouriteActivities;
+                    if (typeof user_fav != "undefined"){
+                        db.collection('activities').get().then(snap => {
+                            var size = snap.size;
+                            for (let i = 1; i <= size; i++){
+                                db.collection("activities").doc(i.toString()).onSnapshot(
+                                    activity => {
+                                        if (user_fav.indexOf(activity.data().name) != -1){
+                                            document.body.childNodes[5].childNodes[1].innerHTML += '<div class="activityBox"><button class="favouriteIcon"><i class="material-icons md-48"></i></button><a class="activityLink" href="' 
+                                            + activity.data().href + '"><h3 class="activityTitle">' + activity.data().name 
+                                            + '</h3><img class="activityImage" src="../images/' + activity.data().icon + '.PNG" alt="Activity"><p class="activityDescription">' 
+                                            + activity.data().description + '</p></a></div>';
+                                        } 
+                                    })
+                            } 
+                        });
+                    }
+                    //console.log(user_fav);
+                    checkFavourite();
+                });
+        } else {
+            console.log("User not logged in");
+        }
+    });
+}
+
+function filter(type){
+    while(document.getElementsByClassName("activityBox").length > 0){
+        document.querySelector(".activityBox").remove();
+    }
+    if(type == "none"){
+        insertActivity();
+    } else if(type != "favourite"){
+        insertActivity(type);
+    } else{
+        insertFavouritesOnly();
+    }
+}
+
+document.getElementById("favouriteFilter").addEventListener("click", function(){filter("favourite");});
+document.getElementById("physicalFilter").addEventListener("click", function(){filter("physical");});
+document.getElementById("mentalFilter").addEventListener("click", function(){filter("mental");});
+document.getElementById("noFilter").addEventListener("click", function(){filter("none");});
+insertActivity();

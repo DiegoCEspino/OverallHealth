@@ -1,6 +1,6 @@
 body{
     display: grid;
-    grid-template-rows: 15% 85%;
+    grid-template-rows: 10% 10% 70% 10%;
     grid-template-columns: 25% 50% 25%;
 }
 
@@ -11,8 +11,14 @@ header{
     margin: auto;
 }
 
-#content{
+#filterBox{
     grid-row: 2;
+    grid-column: 2;
+    text-align: center;
+}
+
+#content{
+    grid-row: 3;
     grid-column: 2;
     margin: auto;
     background-color: lightseagreen;
@@ -26,6 +32,7 @@ header{
 }
 
 .footer {
+    grid-row: 4;
     margin: 0px;
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -38,7 +45,13 @@ header{
     grid-gap: 15%;
 }
 
-a img{
+#noFilter i, #favouriteFilter i{
+    color: darkgray;
+    background-color: darkblue;
+    border-radius: 100%;
+}
+
+img{
     height: 50px;
     width: auto;
     background-color: darkblue;
