@@ -35,7 +35,8 @@ function Favourite(activityName){
 }
 
 function checkFavourite(){
-    var activities = (document.getElementsByClassName("favouriteIcon"));
+    var activities = (document.getElementsByClassName("favouriteIcon"));  
+    console.log(document.getElementsByClassName("favouriteIcon"));  
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             let array = db.collection("users").doc(user.uid)
@@ -105,13 +106,16 @@ function insertFavouritesOnly(){
                                             + activity.data().href + '"><h3 class="activityTitle">' + activity.data().name 
                                             + '</h3><img class="activityImage" src="../images/' + activity.data().icon + '.PNG" alt="Activity"><p class="activityDescription">' 
                                             + activity.data().description + '</p></a></div>';
-                                        } 
+                                        }
+                                        if (i == size){
+                                            console.log(document.getElementsByClassName("favouriteIcon"));  
+                                            checkFavourite();
+                                        }
                                     })
                             } 
                         });
                     }
                     //console.log(user_fav);
-                    checkFavourite();
                 });
         } else {
             console.log("User not logged in");
