@@ -1,13 +1,13 @@
 .body {
-    background-color: #99A1B7;
+    background-color: #99aab7;
     margin: 0px;
     min-height: 750px;
     background: linear-gradient(to bottom, 
-    #6E768C, #99A1B7);
+    #52AEFC, #99A1B7);
 }
 #logo-name {
     color: #D2D7E4;
-    border: #283046;
+    border: #292846;
     border-style: solid;
     border-width: 5px;
     background-color: #636B81;
@@ -19,6 +19,7 @@
     max-width: 200px;
     text-align: center;
     margin-top: 50px;
+    font-family: 'Comforter Brush', cursive;
 }
 #inspire-quote {
     padding: 20px 30px;
