@@ -36,32 +36,42 @@
 </head>
 
 <body id="background-Journal">
+
     <h1 id="Journal-Title">My Journal</h1>
     <img id="book-image" src="../images/bookIcon.png">
+
+    <br> 
+
+    <p class="journal-description">Taking the extra time to relax is also a great way to boost your immune system and
+        help you stay mentally and physically healthy.
+        Writing in a journal for only 15 to 20 minutes a day a few times a week is an effective way to relax and unwind
+        from the stress of each day.
+        Journaling Boosts Your Mood
+    </p>
+    <p>Not sure what to write?</p>
+    <p>Here is a suggestion!</p>
+    <p>Three Good Things (TGT) or What-Went-Well is a gratitude journal exercise that cultivates gratitude, 
+        increases optimism, and boosts happiness. Method: Before going to bed at night,
+         sit for a while and look back on your day. 
+         Think and write 3 things that went well. 
+        Reflect on them. Repeat for at least a week.</p>
 
     <form>
         <div class="form-group">
             <label for="exampleFormControlInput1">Add a title</label>
             <input type="text" class="form-control" id="title" placeholder="Title">
         </div><br>
-
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Write down your thoughts below</label>
             <textarea class="form-control" id="description" rows="15"></textarea>
         </div>
         <br>
-            <div class="d-flex justify-content-end">
-                <button type="button" class="btn btn-lg btn-primary pull-right" onclick="writeReview()">Save</button>
-            </div>
+        <div class="d-flex justify-content-end">
+                <button type="button" class="btn btn-lg btn-primary pull-right" onclick="writeJournal()">Save</button>
         </div>
     </form>
-
-  
-
-
-
-   
-
+    <p id="journals"></p>
+    <script src="../scripts/JournalWriting.js"></script>
 </body>
 
 </html>
