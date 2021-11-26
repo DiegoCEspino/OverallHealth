@@ -49,7 +49,7 @@ header{
 .footer {
     margin: 0px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     background-color: #283046;
     padding: 10px;
     width: 100%;
