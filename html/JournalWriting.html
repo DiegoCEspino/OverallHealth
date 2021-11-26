@@ -39,8 +39,10 @@
 
     <h1 id="Journal-Title">My Journal</h1>
     <img id="book-image" src="../images/bookIcon.png">
-
-    <br> 
+    <i class="material-icons md-48" id="back">
+        <a id="backLink" href="Activity.html">reply</a>
+    </i>
+    <br>
 
     <p class="journal-description">Taking the extra time to relax is also a great way to boost your immune system and
         help you stay mentally and physically healthy.
@@ -50,10 +52,10 @@
     </p>
     <p>Not sure what to write?</p>
     <p>Here is a suggestion!</p>
-    <p>Three Good Things (TGT) or What-Went-Well is a gratitude journal exercise that cultivates gratitude, 
+    <p>Three Good Things (TGT) or What-Went-Well is a gratitude journal exercise that cultivates gratitude,
         increases optimism, and boosts happiness. Method: Before going to bed at night,
-         sit for a while and look back on your day. 
-         Think and write 3 things that went well. 
+        sit for a while and look back on your day.
+        Think and write 3 things that went well.
         Reflect on them. Repeat for at least a week.</p>
 
     <form>
@@ -67,9 +69,13 @@
         </div>
         <br>
         <div class="d-flex justify-content-end">
-                <button type="button" class="btn btn-lg btn-primary pull-right" onclick="writeJournal()">Save</button>
+            <button type="button" class="btn btn-lg btn-primary pull-right" onclick="writeJournal()">Save</button>
         </div>
     </form>
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Estonia&display=swap" rel="stylesheet">
     <p id="journals"></p>
     <script src="../scripts/JournalWriting.js"></script>
 </body>

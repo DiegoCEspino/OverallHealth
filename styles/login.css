@@ -2,12 +2,13 @@ body {
     background-color: #52aefc;
     margin: 0px;
     min-height: 750px;
-    background: linear-gradient(to bottom, 
-    #52aefc, #f0e662);
+    background: linear-gradient(to bottom,
+            #52aefc, #f0e662);
 }
 
 .display-4 {
-    font-family: 'Comforter Brush', cursive;
     text-align: center;
-    margin-top: 20px;
+    font-family: 'Estonia', cursive;
+    font-size: 75px;
+    font-weight: bold;
 }
