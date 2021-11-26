@@ -9,6 +9,10 @@
 }
 
 #background-Journal {
-    background-color: burlywood;
+    background-color: #52aefc;
+    margin: 0px;
+    min-height: 750px;
+    background: linear-gradient(to bottom, 
+    #52aefc, #f0e662);
 
 }

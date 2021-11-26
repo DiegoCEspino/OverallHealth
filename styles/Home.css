@@ -10,6 +10,7 @@
     border: #f7e061;
     border-style: solid;
     border-width: 3px;
+    border-radius: 50%;
     background-color: #2a2ac0;
     padding: 25px 0px;
     font-size: 35px;
@@ -53,10 +54,11 @@
     padding: 20px 10px;
     font-size: 40px;
     color: #f7e061;
-    background-color: #52aefc;
+    background-color: #2a2ac0;
     border: #f7e061;
     border-style: solid;
     border-width: 3px;
+    border-radius: 50%;
     text-decoration: none;
     display: block;
     margin: 0px auto;
