@@ -3,6 +3,11 @@ body{
     grid-template-rows: 10% 10% 70% 10%;
     grid-template-columns: 25% 50% 25%;
     height: 100vh;
+    background-color: #52aefc;
+    margin: 0px;
+    min-height: 750px;
+    background: linear-gradient(to bottom, 
+    #52aefc, #f0e662);
 }
 
 header{
@@ -38,6 +43,7 @@ header{
     grid-row: 1;
     grid-column: 3;
     margin: auto;
+    background-color: #52aefc;
 }
 
 .footer {

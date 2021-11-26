@@ -1,15 +1,24 @@
 #Meditation-Title {
     text-align: center;
+    font-family: 'Estonia', cursive;
+    font-size: 75px;
+    font-weight: bold;
+}
+
+
+
+#background-Meditation {
+    background-color: #52aefc;
+    margin: 0px;
+    min-height: 750px;
+    background: linear-gradient(to bottom,
+            #52aefc, #f0e662);
 }
 
 
 
 
-
-
-
-
-#meditation-img{
+#meditation-img {
     width: 250px;
     display: block;
     margin: 0px auto;
