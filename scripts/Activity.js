@@ -21,10 +21,47 @@ function timer(minutes, seconds, minutesShown, secondsShown){
     }
 }
 
+function activityDetails(){
+    var title = localStorage.getItem("lastActivity");
+    document.getElementById("title").innerHTML = title;
+    db.collection('activities').get().then(snap => {
+        var size = snap.size 
+        for (let i = 1; i <= size; i++){
+            db.collection("activities").doc(i.toString()).onSnapshot(
+                activity => {
+                    if (activity.data().name == title){
+                        document.getElementById("description").innerHTML = activity.data().description;
+                    }                 
+                }
+            );
+        }
+    });
+}
+
+activityDetails();
+
 let minutesShown = document.getElementById("minutes");
 let secondsShown = document.getElementById("seconds");
+var seconds = localStorage.getItem("seconds");
+var minutes = localStorage.getItem("minutes");
+if(seconds < 10){
+    secondsShown.innerHTML = "0" + seconds;
+}
+else{
+    secondsShown.innerHTML = "" + seconds;
+}
+if(minutes < 10){
+    minutesShown.innerHTML = "0" + minutes;
+}
+else{
+    minutesShown.innerHTML = "" + minutes;
+}
+
+var initialTime;
 
 const time = async () => {
+    initialTime = new Date();
+    document.getElementById("start").remove();
     while(localStorage.getItem("minutes") > 0 || localStorage.getItem("seconds") > 0){
         await new Promise(r => setTimeout(r, 1000));
         timer(localStorage.getItem("minutes"), localStorage.getItem("seconds"), minutesShown, secondsShown);
@@ -36,4 +73,14 @@ const time = async () => {
         localStorage.setItem("timerSet", "false");
     }
 }
-time();
+
+window.onunload = function(event) {
+    var time = Math.abs(new Date() - initialTime);
+    //console.log(time);
+    if (!isNaN(time)){
+        localStorage.setItem("activityTime", time);
+    }
+};
+
+
+  

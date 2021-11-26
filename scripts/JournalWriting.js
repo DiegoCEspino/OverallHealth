@@ -14,7 +14,7 @@ function readJournals(){
                                    if (journal.data().user == userName){
                                         document.getElementById("journals").innerHTML += "<br><h3>Journal: " + journal.data().title 
                                             + "</h3>Written on " + journal.data().date.toDate() 
-                                            + "<br><br>" + journal.data().entry;
+                                            + "<br><br>" + journal.data().entry + "<br>";
                                    } 
                                 });
                         } 
@@ -27,7 +27,26 @@ function writeJournal(){
     var title = document.getElementById("title").value;
     var entry = document.getElementById("description").value;
     var date = new Date();
-    console.log(date);
+    firebase.auth().onAuthStateChanged(user => {
+        if (user) {
+            let array = db.collection("users").doc(user.uid)
+            array.get()
+                .then(userDoc => {
+                    var userName = userDoc.data().name;
+                    db.collection('Journals').get().then(snap => {
+                        var size = snap.size;
+                        db.collection("Journals").doc((size + 1).toString()).set({
+                            user: userName,
+                            title: title,
+                            entry: entry,
+                            date: date
+                        });
+                        readJournals();
+                        document.getElementById("title").value = "";
+                        document.getElementById("description").value = "";
+                    });
+            });
+        }});
 }
 
 readJournals();
