@@ -97,7 +97,7 @@ img{
 .footer {
     margin: 0px;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto;
     background-color: #283046;
     padding: 10px;
     width: 100%;
@@ -109,4 +109,8 @@ img{
 .nav-icon{
     height: 50px;
     width: auto;
+}
+
+#start{
+    margin: auto;
 }
