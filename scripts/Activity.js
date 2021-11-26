@@ -44,13 +44,21 @@ let minutesShown = document.getElementById("minutes");
 let secondsShown = document.getElementById("seconds");
 var seconds = localStorage.getItem("seconds");
 var minutes = localStorage.getItem("minutes");
-if (seconds < 10) {
+if (seconds == null){
+    localStorage.setItem("seconds", 0);
+    seconds = localStorage.getItem("seconds");
+} 
+else if (seconds < 10) {
     secondsShown.innerHTML = "0" + seconds;
 }
 else {
     secondsShown.innerHTML = "" + seconds;
 }
-if (minutes < 10) {
+if (minutes == null){
+    localStorage.setItem("minutes", 0);
+    minutes = localStorage.getItem("minutes");
+} 
+else if (minutes < 10) {
     minutesShown.innerHTML = "0" + minutes;
 }
 else {
