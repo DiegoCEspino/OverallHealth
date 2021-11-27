@@ -1,9 +1,10 @@
 body {
     background-color: #52aefc;
-    margin: 0px;
-    min-height: 750px;
+    min-height: 100vh;
     background: linear-gradient(to bottom, 
     #52aefc, #f0e662);
+    display: grid;
+    grid-template-rows: auto auto auto;
 }
 
 .container {
@@ -15,7 +16,6 @@ body {
 }
 
 #welcome-message {
-    margin-top: 50px;
     font-size: 75px;
 }
 #login-message {
@@ -24,7 +24,6 @@ body {
 
 @media only screen and (max-width: 1000px) {
     #welcome-message {
-        margin-top: 60px;
         font-size: 60px;
     }
     #login-message {
