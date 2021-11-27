@@ -11,6 +11,7 @@ body{
 header{
     display: grid;
     grid-template-columns: 10% 30% 50% 10%;
+    grid-template-rows: 50% 50%;
     grid-row: 1;
 }
 
@@ -87,10 +88,13 @@ img{
 
 #timerLink{
     text-decoration: none;
-    color:darkgray;
+    color:black;
 }
 
 #timerLinkIcon{
+    grid-column: 1;
+    grid-row: 2;
+    margin-bottom: auto;
     text-align: center;
 }
 
@@ -111,6 +115,17 @@ img{
     width: auto;
 }
 
+#explain{
+    grid-row: 1;
+    grid-column: 1;
+    margin-top: auto;
+    text-align: center;
+}
+
 #start{
-    margin: auto;
+    grid-row: 1;
+    grid-column: 2;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
 }

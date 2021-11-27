@@ -36,9 +36,7 @@
         <i class="material-icons md-48" id="timerLinkIcon">
             <a id="timerLink" href="setTimer.html">av_timer</a>
         </i>
-
-        <i class="material-icons md-48" id="activityIcon">fitness_center</i>
-
+        <p id="explain">Set a timer for your activity here!</p>
         <div id="timer">
             <div  class="clockContainer" id="minuteClock">
                 <span id="minutes">00</span>
@@ -48,13 +46,13 @@
                 <span id="seconds">00</span>
             </div>
         </div>
+        <button id="start" onclick="time()">Click to begin the timer for the activity</button>
     </header>
 
     <div id="content">
         <h2 id="description">
             Activity description box
         </h2>
-        <button id="start" onclick="time()">START</button>
     </div>
     
     <footer class="footer">
