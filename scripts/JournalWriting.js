@@ -14,7 +14,7 @@ function readJournals(){
                                    if (journal.data().user == userName){
                                         document.getElementById("journals").innerHTML += "<br><h3>Journal: " + journal.data().title 
                                             + "</h3>Written on " + journal.data().date.toDate() 
-                                            + "<br><br>" + journal.data().entry;
+                                            + "<br><br>" + journal.data().entry + "<br>";
                                    } 
                                 });
                         } 

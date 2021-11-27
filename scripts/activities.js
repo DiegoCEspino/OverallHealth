@@ -25,7 +25,7 @@ function Favourite(activityName){
                         
                     })
                     .catch(function(error){
-                        console.log("erros is"+ error);
+                        console.log("error is"+ error);
                     });
                 });
         } else {
@@ -36,7 +36,6 @@ function Favourite(activityName){
 
 function checkFavourite(){
     var activities = (document.getElementsByClassName("favouriteIcon"));  
-    console.log(document.getElementsByClassName("favouriteIcon"));  
     firebase.auth().onAuthStateChanged(user => {
         if (user) {
             let array = db.collection("users").doc(user.uid)
@@ -73,10 +72,17 @@ function insertActivity(type = null){
             db.collection("activities").doc(i.toString()).onSnapshot(
                 activity => {
                 if ((type == null) || (activity.data().icon == "meditate" && type == "mental") || (activity.data().icon == "strength" && type == "physical")){
-                    document.body.childNodes[5].childNodes[1].innerHTML += '<div class="activityBox"><button class="favouriteIcon"><i class="material-icons md-48"></i></button><a class="activityLink" href="' 
+                    document.getElementById("activitiesBox").innerHTML += '<div class="activityBox"><button class="favouriteIcon"><i class="material-icons md-48"></i></button><a class="activityLink" href="' 
                     + activity.data().href + '"><h3 class="activityTitle">' + activity.data().name 
                     + '</h3><img class="activityImage" src="../images/' + activity.data().icon + '.PNG" alt="Activity"><p class="activityDescription">' 
                     + activity.data().description + '</p></a></div>';
+                    if (i == size){
+                        var links = document.getElementsByClassName("activityLink");
+                        for (let j = 0; j < links.length; j++){
+                            links[j].addEventListener("click", function(){localStorage.setItem("lastActivity", links[j].childNodes[0].innerHTML);})
+                        }
+                    }
+                    //console.log(document.body.childNodes[5].childNodes[1].childNodes);
                     //document.getElementsByClassName("activityTitle")[i - 1].innerHTML = activity.data().name;
                     //document.getElementsByClassName("activityDescription")[i - 1].innerHTML = activity.data().description;
                     //document.getElementsByClassName("activityLink")[i - 1].href = activity.data().href;
@@ -102,7 +108,7 @@ function insertFavouritesOnly(){
                                 db.collection("activities").doc(i.toString()).onSnapshot(
                                     activity => {
                                         if (user_fav.indexOf(activity.data().name) != -1){
-                                            document.body.childNodes[5].childNodes[1].innerHTML += '<div class="activityBox"><button class="favouriteIcon"><i class="material-icons md-48"></i></button><a class="activityLink" href="' 
+                                            document.getElementById("activitiesBox").innerHTML += '<div class="activityBox"><button class="favouriteIcon"><i class="material-icons md-48"></i></button><a class="activityLink" href="' 
                                             + activity.data().href + '"><h3 class="activityTitle">' + activity.data().name 
                                             + '</h3><img class="activityImage" src="../images/' + activity.data().icon + '.PNG" alt="Activity"><p class="activityDescription">' 
                                             + activity.data().description + '</p></a></div>';

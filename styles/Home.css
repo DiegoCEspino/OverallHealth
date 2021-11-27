@@ -10,16 +10,17 @@
     border: #f7e061;
     border-style: solid;
     border-width: 3px;
+    border-radius: 100px;
     background-color: #3333a7;
-    padding: 25px 0px;
+    padding: 30px 0px;
     font-size: 35px;
     max-width: 200px;
     display: block;
     margin: 0px auto;
     max-width: 150px;
     text-align: center;
-    margin-top: 50px;
-    font-family: 'Comforter Brush', cursive;
+    margin-top: 75px;
+    font-family: 'sans';
 }
 #inspire-quote {
     padding: 20px 30px;
@@ -30,8 +31,8 @@
     max-width: 700px;
     text-align: center;
     padding: 55px;
-    min-height: 325px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    min-height: 350px;
+    font-family: 'sans';
 }
 .nav-icon{
     height: 50px;
@@ -57,13 +58,11 @@
     border: #f7e061;
     border-style: solid;
     border-width: 3px;
+    border-radius: 30px;
     text-decoration: none;
     display: block;
     margin: 0px auto;
     max-width: 250px;
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'sans';
 }
-
-@media only screen and (max-width: 700px) {
-  }

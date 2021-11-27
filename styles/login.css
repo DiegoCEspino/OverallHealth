@@ -1,0 +1,33 @@
+body {
+    background-color: #52aefc;
+    margin: 0px;
+    min-height: 750px;
+    background: linear-gradient(to bottom, 
+    #52aefc, #f0e662);
+}
+
+.container {
+    margin: 50px;
+    text-align: center;
+    font-family: 'comic sans';
+    font-weight: bold;
+    color: #3333a7;
+}
+
+#welcome-message {
+    margin-top: 50px;
+    font-size: 75px;
+}
+#login-message {
+    font-size: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #welcome-message {
+        margin-top: 60px;
+        font-size: 60px;
+    }
+    #login-message {
+        font-size: 35px;
+    }
+}
