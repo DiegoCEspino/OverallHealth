@@ -87,7 +87,7 @@ header {
 }
 
 #start {
-    margin: 20px auto;
+    margin: 20px auto 0px auto;
     border-style: none;
     background-color: #5c88bb;
     color: #f7f3d4;
@@ -104,16 +104,22 @@ header {
     background-color: #3333a7;
 }
 
-#content {
+#description {
     font-family: 'sans';
+    font-size: 25px;
     padding: 20px;
     color: #f7f3d4;
     margin: auto 50px;
+    margin-top: 20px;
     background-color: #5c88bb;
     border-radius: 10px;
     border-bottom-style: solid;
     border-bottom-color: #f0e662;
     border-width: 3px;
+}
+
+#break {
+    height: 120px;
 }
 
 /* Navbar */

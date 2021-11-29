@@ -24,3 +24,8 @@ function formatTime(minutes, seconds){
 }
 
 document.getElementById("button").addEventListener("click", changeTimer);
+
+document.getElementById("back").addEventListener("click", myFunction);
+function myFunction() {
+    location.replace("Activity.html");
+}

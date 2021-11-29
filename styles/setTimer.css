@@ -1,55 +1,75 @@
-#content{
-    display: grid;
-    grid-template-rows: 10% 20% 40% 20% 10%;
-    text-align: center;
-}
-
 body { 
     background-color: #52aefc;
     margin: 0px;
-    min-height: 750px;
+    min-height: 100vh;
     background: linear-gradient(to bottom, 
     #52aefc, #f0e662);
 }
 
+#title {
+    font-family: 'sans';
+    font-size: 60px;
+    margin: 40px auto 20px auto;
+    color: #f7f3d4;
+    background-color: #3333a7;
+    width: fit-content;
+    padding: 0px 10px;
+    text-align: center;
+    justify-self: center;
+    border-bottom-style: solid;
+    border-width: 3px;
+    border-color: #f0e662;
+    border-radius: 10px;
+}
+
+#content{
+    display: grid;
+    text-align: center;
+}
+
 #back{
-    grid-row: 1;
-    text-align: left;
+    margin: 0px 30px;
+    justify-self: left;
+    height: 70px;
+    width: 80px;
+    padding: 0px 10px;
+    background-color: #5c88bb;
+    border-bottom-style: solid;
+    border-width: 3px;
+    border-color: #f0e662;
+    border-radius: 10px;
+}
+#back:hover {
+    background-color: #375e8b;
+}
+#back:active {
+    background-color: #3333a7;
 }
 
 #timer{
-    background-color: cadetblue;
+    background-color: #5c88bb;
     display: grid;
-    grid-template-columns: 43% 14% 43%;
-    border-radius: 200%;
+    grid-template-columns: 45% 10% 45%;
+    border-radius: 100%;
     margin: auto;
-    height: 300px;
-    width: 300px;
-    grid-row: 4;
+    height: 250px;
+    width: 250px;
 }
 
 input{
     height: 100px;
-    width: 50px;
+    width: 100px;
     font-size: 100px;
 }
 
 .clockContainer{
+    width: 60px;
+    font-size: 30px;
     margin: auto;
-}
-
-#minuteClock{
-    margin: auto;
-    grid-column: 1;
 }
 
 #column{
-    grid-column: 2;
-}
-
-#secondClock{
-    margin: auto;
-    grid-column: 3;
+    font-size: 50px;
 }
 
 #minutes, #seconds{
@@ -57,57 +77,43 @@ input{
     width: 100%;
 }
 
-footer{
-    grid-row: 3;
-    margin: auto;
-    text-align: center;
+#button {
+    justify-self: center;
+    height: 80px;
+    width: fit-content;
+    padding: 0px 20px;
+    color: #f7f3d4;
+    font-family: 'sans';
+    font-size: 40px;
+    background-color: #5c88bb;
+    border-style: none;
+    border-bottom-style: solid;
+    border-width: 3px;
+    border-color: #f0e662;
+    border-radius: 10px;
+}
+#button:hover {
+    background-color: #375e8b;
+}
+#button:active {
+    background-color: #3333a7;
 }
 
-.title{
-    border-style: solid;
-    background-color: cadetblue;
-    text-align: center;
-    margin: auto;
-}
-
-#activityIcon{
-    background-color: cadetblue;
-    margin: auto;
-    border-radius: 100%;
-    grid-row: 2;
-}
-
-#subtitle{
-    grid-row: 3;
-}
-
-.material-icons.md-48{
-    font-size: 72px;
-}
-
-img{
-    height: 25%;
-    width: 25%;
-}
-
-#backLink{
-    text-decoration: none;
-    color:darkgray;
-}
-
-.nav-icon{
-    height: 50px;
-    width: auto;
-}
+/* Navbar */
 .footer {
     margin: 0px;
     display: grid;
     grid-template-columns: auto auto;
-    background-color: #283046;
+    background-color: #3333a7;
     padding: 10px;
     width: 100%;
     bottom: 0;
     position: fixed;
     justify-content: center;
     grid-gap: 15%;
+}
+.nav-icon{
+    height: 50px;
+    width: auto;
+    background-color: transparent;
 }

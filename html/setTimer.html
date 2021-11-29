@@ -29,18 +29,11 @@
     <title>Set Timer</title>
 </head>
 <body>
-    <h1 class="title">Exercise</h1>
-
+    <h1 class="title" id="title">Set Timer</h1>
+    
     <form action="Activity.html">
         <div id="content">
-            <i class="material-icons md-48" id="back">
-                <a id="backLink" href="Activity.html">reply</a>
-            </i>
-
-            <i class="material-icons md-48" id="activityIcon">fitness_center</i>
-
-            <h2 id="subtitle" class="title">Timer</h2>
-            
+            <img src="../images/back.PNG" alt="back" id="back">
             <div id="timer">
                 <div  class="clockContainer" id="minuteClock">
                     <input type="number" min="0" max="59" id="minutes" placeholder="00" autofocus>   
@@ -50,11 +43,11 @@
                     <input type="number" min="0" max="59" id="seconds" placeholder="00">
                 </div>
             </div>
+            <br><br>
+            <footer>
+                <button id="button" type="submit">Start</button>
+            </footer>
         </div>
-        <br><br><br><br><br><br><br><br><br>
-        <footer>
-            <button id="button" class="btn btn-success btn-lg" type="submit">Start</button>
-        </footer>
     </form>
     
     <footer class="footer">
