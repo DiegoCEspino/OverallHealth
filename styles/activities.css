@@ -79,7 +79,10 @@ button{
     grid-area: activities;
     display: grid;
     grid-auto-rows: auto;
-    grid-gap: 10px;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    max-width: 80vw;
+    margin: auto;
 }
 
 .activityBox{
@@ -118,13 +121,12 @@ button{
     height: 120px;
 }
 
-@media only screen and (min-width: 1000px) {
-    .activitiesBox {
-        width: 600px;
-        display: grid;
-        grid-template-columns: 100px 100px;
-        grid-template-rows: repeat(6, 100px);
-        grid-auto-flow: row;
+@media only screen and (max-width: 1000px) {
+    #activitiesBox {
+        grid-template-columns: 1fr;
+        max-width: 70vw;
+        margin: auto;
+        grid-gap: 20px;
     }
 }
 
