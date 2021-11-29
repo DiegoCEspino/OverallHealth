@@ -99,6 +99,10 @@ input{
     background-color: #3333a7;
 }
 
+#break {
+    height: 120px;
+}
+
 /* Navbar */
 .footer {
     margin: 0px;

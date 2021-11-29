@@ -50,3 +50,8 @@ function writeJournal(){
 }
 
 readJournals();
+
+document.getElementById("back").addEventListener("click", myFunction);
+function myFunction() {
+    location.replace("activities.html");
+}
