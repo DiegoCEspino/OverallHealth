@@ -1,34 +1,82 @@
-#Meditation-Title {
-    text-align: center;
-    font-family: 'Estonia', cursive;
-    font-size: 75px;
-    font-weight: bold;
-}
-
-
-
 #background-Meditation {
     background-color: #52aefc;
     margin: 0px;
-    min-height: 750px;
+    min-height: 100vh;
     background: linear-gradient(to bottom,
-            #52aefc, #f0e662);
+    #52aefc, #f0e662);
 }
 
-
-
+#Meditation-Title {
+    font-family: 'sans';
+    font-size: 60px;
+    margin: 40px auto 20px auto;
+    color: #f7f3d4;
+    background-color: #3333a7;
+    width: fit-content;
+    padding: 0px 10px;
+    text-align: center;
+    justify-self: center;
+    border-bottom-style: solid;
+    border-width: 3px;
+    border-color: #f0e662;
+    border-radius: 10px;
+}
 
 #meditation-img {
-    width: 250px;
+    width: 150px;
     display: block;
-    margin: 0px auto;
+    margin: 0px auto 20px auto;
 }
 
+#dialogue {
+    height: fit-content;
+    margin: 10px auto;
+    padding: 10px 25px;
+    font-family: 'sans';
+    font-size: 20px;
+    background-color: #5c88bb;
+    border-bottom-style: solid;
+    border-width: 3px;
+    border-color: #f0e662;
+    border-radius: 10px;
+    max-width: 90vw;
+    color: #f7f3d4;
+}
+
+#button {
+    text-decoration: none;
+    height: 80px;
+    width: fit-content;
+    padding: 5px 20px;
+    color: #f7f3d4;
+    font-family: 'sans';
+    font-size: 40px;
+    background-color: #5c88bb;
+    border-style: none;
+    border-bottom-style: solid;
+    border-width: 3px;
+    border-color: #f0e662;
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto;
+}
+#button:hover {
+    background-color: #375e8b;
+}
+#button:active {
+    background-color: #3333a7;
+}
+
+#break {
+    height: 70px;
+}
+
+/* Navbar */
 .footer {
     margin: 0px;
     display: grid;
     grid-template-columns: auto auto;
-    background-color: #283046;
+    background-color: #3333a7;
     padding: 10px;
     width: 100%;
     bottom: 0;
@@ -39,4 +87,5 @@
 .nav-icon{
     height: 50px;
     width: auto;
+    background-color: transparent;
 }
