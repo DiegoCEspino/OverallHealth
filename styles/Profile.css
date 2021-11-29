@@ -1,12 +1,75 @@
-.nav-icon{
-    height: 50px;
-    width: auto;
+body {
+    background-color: #52aefc;
+    margin: 0px;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, 
+    #52aefc, #f0e662);
 }
+
+#title{
+    font-family: 'sans';
+    font-size: 60px;
+    margin: 40px auto;
+    color: #f7f3d4;
+    background-color: #3333a7;
+    width: fit-content;
+    padding: 0px 10px;
+    text-align: center;
+    justify-self: center;
+    border-bottom-style: solid;
+    border-width: 3px;
+    border-color: #f0e662;
+    border-radius: 10px;
+}
+
+#LogOut {
+    text-decoration: none;
+    margin: 0px auto 20px auto;
+    border-style: none;
+    background-color: #5c88bb;
+    color: #f7f3d4;
+    font-size: 25px;
+    border-radius: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: #f0e662;
+    border-width: 3px;
+    padding: 10px;
+    display: block;
+    max-width: fit-content;
+    margin: 20px auto;
+}
+#LogOut:hover {
+    background-color: #375e8b;
+}
+#LogOut:active {
+    background-color: #3333a7;
+}
+
+#actions {
+    height: fit-content;
+    margin: 10px auto;
+    padding: 10px;
+    font-family: 'sans';
+    font-size: 20px;
+    background-color: #5c88bb;
+    border-bottom-style: solid;
+    border-width: 3px;
+    color: #f7f3d4;
+    border-color: #f0e662;
+    border-radius: 10px;
+    max-width: 80vw;
+}
+
+#break {
+    height: 120px;
+}
+
+/* Navbar */
 .footer {
     margin: 0px;
     display: grid;
     grid-template-columns: auto auto;
-    background-color: #283046;
+    background-color: #3333a7;
     padding: 10px;
     width: 100%;
     bottom: 0;
@@ -14,20 +77,8 @@
     justify-content: center;
     grid-gap: 15%;
 }
-
-body {
-    background-color: #52aefc;
-    margin: 0px;
-    min-height: 750px;
-    background: linear-gradient(to bottom, 
-    #52aefc, #f0e662);
-}
-
-#LogOut{
-    text-decoration: none;
-}
-
-.material-icons.md-48{
-    font-size: 72px;
-    display: inline;
+.nav-icon{
+    height: 50px;
+    width: auto;
+    background-color: transparent;
 }
