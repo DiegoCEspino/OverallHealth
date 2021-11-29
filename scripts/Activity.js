@@ -89,3 +89,8 @@ window.onunload = function (event) {
         localStorage.setItem("activityTime", time);
     }
 };
+
+document.getElementById("timer").addEventListener("click", myFunction);
+function myFunction() {
+    location.replace("setTimer.html");
+}

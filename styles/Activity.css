@@ -1,108 +1,127 @@
-body{
-    display: grid;
-    grid-template-rows: 50% 50%;
+body {
     background-color: #52aefc;
     margin: 0px;
-    min-height: 750px;
+    min-height: 100vh;
     background: linear-gradient(to bottom, 
     #52aefc, #f0e662);
 }
 
-header{
+header {
     display: grid;
-    grid-template-columns: 10% 30% 50% 10%;
-    grid-template-rows: 50% 50%;
-    grid-row: 1;
 }
 
-#content{
-    grid-row: 2;
-    margin: auto;
-    background-color: wheat;
-}
-
-#title{
-    grid-row: 1;
-    grid-column: 3;
-    margin: auto;
-}
-
-#activityIcon{
-    background-color: cadetblue;
-    margin: auto;
-    border-radius: 100%;
-    grid-row: 1;
-    grid-column: 4;
-}
-
-#timer{
-    background-color: cadetblue;
-    display: grid;
-    grid-template-columns: 43% 14% 43%;
-    border-radius: 200%;
-    margin: auto;
-    height: 100px;
-    width: 200px;
-    grid-row: 1;
-    grid-column: 2;
-}
-
-.clockContainer{
-    margin: auto;
-}
-
-#minuteClock{
-    margin: auto;
-    grid-column: 1;
-}
-
-#column{
-    grid-column: 2;
-}
-
-#secondClock{
-    margin: auto;
-    grid-column: 3;
-}
-
-#minutes, #seconds{
+#title {
+    font-family: 'sans';
+    font-size: 60px;
+    margin: 40px auto 20px auto;
+    color: #f7f3d4;
+    background-color: #3333a7;
+    width: fit-content;
+    padding: 0px 10px;
     text-align: center;
-    font-size: x-large;
-    background-color: white;
+    justify-self: center;
+    border-bottom-style: solid;
+    border-width: 3px;
+    border-color: #f0e662;
+    border-radius: 10px;
 }
 
-footer{
-    grid-row: 3;
-    margin: auto;
-    text-align: center;
+.material-icons.md-48 {
+    font-size: 100px;
 }
-
-.material-icons.md-48{
-    font-size: 72px;
-}
-
-img{
-    height: 25%;
-    width: 25%;
-}
-
-#timerLink{
+#timerLink {
     text-decoration: none;
-    color:black;
+    color: #f7f3d4;
 }
-
 #timerLinkIcon{
-    grid-column: 1;
-    grid-row: 2;
     margin-bottom: auto;
     text-align: center;
 }
 
+#set-timer {
+    font-family: 'sans';
+    font-size: 25px;
+    text-align: center;
+    background-color: #5c88bb;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: #f0e662;
+    color: #f7f3d4;
+}
+
+#timer {
+    background-color: #5c88bb;
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    border-radius: 200%;
+    border-bottom-style: solid;
+    border-bottom-color: #f0e662;
+    border-width: 5px;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+}
+#timer:hover {
+    background-color: #375e8b;
+}
+#timer:active {
+    background-color: #3333a7;
+}
+
+.clockContainer {
+    margin: auto;
+}
+#secondClock, #minuteClock {
+    margin: auto;
+}
+#column {
+    font-size: 50px;
+    color: #f7f3d4;
+}
+#minutes, #seconds {
+    text-align: center;
+    font-size: 50px;
+    color: #f7f3d4;
+}
+
+#start {
+    margin: 20px auto;
+    border-style: none;
+    background-color: #5c88bb;
+    color: #f7f3d4;
+    font-size: 25px;
+    border-radius: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: #f0e662;
+    border-width: 3px;
+}
+#start:hover {
+    background-color: #375e8b;
+}
+#start:active {
+    background-color: #3333a7;
+}
+
+#content {
+    font-family: 'sans';
+    padding: 20px;
+    color: #f7f3d4;
+    margin: auto 50px;
+    background-color: #5c88bb;
+    border-radius: 10px;
+    border-bottom-style: solid;
+    border-bottom-color: #f0e662;
+    border-width: 3px;
+}
+
+/* Navbar */
 .footer {
     margin: 0px;
     display: grid;
     grid-template-columns: auto auto;
-    background-color: #283046;
+    background-color: #3333a7;
     padding: 10px;
     width: 100%;
     bottom: 0;
@@ -113,19 +132,5 @@ img{
 .nav-icon{
     height: 50px;
     width: auto;
-}
-
-#explain{
-    grid-row: 1;
-    grid-column: 1;
-    margin-top: auto;
-    text-align: center;
-}
-
-#start{
-    grid-row: 1;
-    grid-column: 2;
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto;
+    background-color: transparent;
 }

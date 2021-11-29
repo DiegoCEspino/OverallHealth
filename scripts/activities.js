@@ -72,7 +72,7 @@ function insertActivity(type = null){
             db.collection("activities").doc(i.toString()).onSnapshot(
                 activity => {
                 if ((type == null) || (activity.data().icon == "meditate" && type == "mental") || (activity.data().icon == "strength" && type == "physical")){
-                    document.getElementById("activitiesBox").innerHTML += '<div class="activityBox"><button class="favouriteIcon"><i class="material-icons md-48"></i></button><a class="activityLink" href="' 
+                    document.getElementById("activitiesBox").innerHTML += '<div class="activityBox"><button class="favouriteIcon"><i class="material-icons md-48">star</i></button><a class="activityLink" href="' 
                     + activity.data().href + '"><h3 class="activityTitle">' + activity.data().name 
                     + '</h3><img class="activityImage" src="../images/' + activity.data().icon + '.PNG" alt="Activity"><p class="activityDescription">' 
                     + activity.data().description + '</p></a></div>';
