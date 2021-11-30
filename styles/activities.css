@@ -49,8 +49,8 @@ button{
     height: 65px;
 }
 #mentalFilter, #physicalFilter {
-    max-height: 80px;
-    max-width: 80px;
+    height: 80px;
+    width: 80px;
     background-color: #5c88bb;
     border-radius: 100%;
     border-bottom-style: solid;
@@ -59,8 +59,8 @@ button{
     margin-left: 15%;
 }
 #noFilter, #favouriteFilter{
-    max-height: 80px;
-    max-width: 80px;
+    height: 80px;
+    width: 80px;
     padding: 0px 5px;
     background-color: #5c88bb;
     border-radius: 100%;
