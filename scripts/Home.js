@@ -1,42 +1,29 @@
-function insertName() {
-    firebase.auth().onAuthStateChanged(user => {
-        if (user) {
-            currentUser = db.collection("users").doc(user.uid)
-            currentUser.get()
-                .then(userDoc => {
-                    var user_Name = userDoc.data().name;
-                    console.log(user_Name);
-                    document.getElementById("userName").innerHTML = user_Name;
-                })
-        } else {
-            console.log("User not logged in");
-        }
-    });
-}
-
+//Displays a random quote
 function display_Quote() {
-    var randomNum = Math.floor(Math.random() * 3);
+    var randomNum = Math.floor(Math.random() * 3); // Random number
     console.log(randomNum)
+    // Displays quote
     if (randomNum == 0) {
         db.collection("Quotes").doc("Inspire")
-        .onSnapshot(quote => { 
+        .onSnapshot(quote => { // Quote document
             console.log("current document data: " + quote.data());  
-            document.getElementById("inspire-quote").innerHTML = quote.data().Quote0; 
+            document.getElementById("inspire-quote").innerHTML = quote.data().Quote0; // Sets quote
         })
+    // Displays quote
     } else if (randomNum == 1) {
         db.collection("Quotes").doc("Inspire")
-        .onSnapshot(quote => { 
+        .onSnapshot(quote => { // Quote document
             console.log("current document data: " + quote.data());  
-            document.getElementById("inspire-quote").innerHTML = quote.data().Quote1; 
+            document.getElementById("inspire-quote").innerHTML = quote.data().Quote1; // Sets quote 
         })
+    // Displays quote
     } else {
         db.collection("Quotes").doc("Inspire")
-        .onSnapshot(quote => { 
+        .onSnapshot(quote => { // Quote document
             console.log("current document data: " + quote.data());  
-            document.getElementById("inspire-quote").innerHTML = quote.data().Quote2; 
+            document.getElementById("inspire-quote").innerHTML = quote.data().Quote2; // Sets quote
         })
     }
 }
+//Chooses and displays quote when page is loaded
 display_Quote();
-
-insertName();

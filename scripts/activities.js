@@ -6,7 +6,7 @@ function Favourite(activityName){
         if (user) {
             let array = db.collection("users").doc(user.uid) // Gets the information inside the "users" document for the current user
             array.get()
-                .then(userDoc => {
+                .then(userDoc => { // User document
                     var user_fav = userDoc.data().favouriteActivities; // Array equal to Favourite Activities Array in Firestore
 
                     // If the user doesn't have a favourite activities array or it is empty

@@ -4,8 +4,6 @@ var uiConfig = {
     callbacks: {
         signInSuccessWithAuthResult: function (authResult, redirectUrl) {
             // User successfully signed in.
-            // Return type determines whether we continue the redirect automatically
-            // or whether we leave that to developer to handle.
             var user = authResult.user;
 
             // determine wherther the user is a new user or not
@@ -14,6 +12,7 @@ var uiConfig = {
                         name: user.displayName,
                         email: user.email
                     }).then(function () {
+                        // If successful redirect to activities page
                         window.location.assign("activities.html");
                     })
                     .catch(function (error) {
