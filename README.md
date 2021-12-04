@@ -1,4 +1,4 @@
-## My Web Application (Title)
+## Overall Health
 
 * [General info](#general-info)
 * [Technologies](#technologies)
@@ -15,6 +15,8 @@ Technologies used for this project:
 * HTML, CSS
 * JavaScript
 * Bootstrap 
+* Firebase
+* Google Icons
 * ...
 	
 ## Content
@@ -24,19 +26,62 @@ Content of the project folder:
  Top level of project folder: 
 ├── .gitignore               # Git ignore file
 ├── index.html               # landing HTML file, this is what users see when you come to url
-└── README.md
+├── README.md
+├── .firebaseerc
+├── 404.html
+├── firebase.json
+├── firestore.rules
+├── storage.rules
+└── firestore.indexes.json
 
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
-    /blah.jpg                # 
+    /activities.PNG          
+    /back.PNG
+    /journal.PNG
+    /meditate.PNG
+    /meditation.PNG
+    /Profile.PNG
+    /strength.PNG
 ├── scripts                  # Folder for scripts
-    /blah.js                 # 
+    /activities.js           # Each script is used on the page it shares name with, unless stated otherwise
+    /Activity.js
+    /All.js                  # This script is used on activities.html, Profile.html, and setTimer.html
+    /firebaseAPI_TEAM30.js
+    /Home.js                 # This script is used on index.html
+    /JournalWriting.js
+    /login.js
+    /Profile.js
+    /setTimer.js 
 ├── styles                   # Folder for styles
-    /blah.css                # 
+    /activities.css          # Each css is used on the page it shares name with, unless stated otherwise
+    /Activity,css
+    /Home.css                # This css is used on index.html
+    /JournalWriting.css
+    /login.css
+    /Meditation.css
+    /Profile.css
+    /setTimer.css 
+├── .firebase
+    /hosting.cache
+├── .vscode
+    /settings.json
+├── html
+    /activities.html         # Activities page
+    /Activity.html           # Activity page
+    /JournalWriting.html     # Journal Writing and Reading page
+    /login.html              # Login page
+    /Meditation.html         # Description page for meditation
+    /Profile.html            # Profile page
+    /setTimer.html           # Page where timer is editable
 
 Firebase hosting files: 
-├── .firebaserc...
+├── .firebaserc
+├── firebase.json
+├── firestore.indexes.json
+├── firestore.rules
+└── storage.rules
 
 
 ```
